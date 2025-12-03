@@ -12,6 +12,7 @@ class NMF:
         br_dokumenata, dim_dokumenata = podaci.shape #npr 1000x90
         
         #inicijalizacija
+        self.residuali=[]
         np.random.seed(200)  
         self.W=np.random.rand(br_dokumenata, self.br_komp) 
         self.H=np.random.rand(self.br_komp, dim_dokumenata) 
